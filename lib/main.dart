@@ -6,79 +6,75 @@ void main() {
 
   //const app = MaterialApp(title: "My Title", home: Text("Hello World"));
   //runApp(app);
+  //   runApp(
+  //     MaterialApp(
+  //       title: "My Title",
+  //       home: Scaffold(
+  //         appBar: AppBar(
+  //           title: Text("My App"),
+  //           backgroundColor: Colors.pinkAccent,
+  //           centerTitle: true,
+  //         ),
+  //         body: Text("Hello Flutter"),
+  //       ),
+  //     ),
+  //   );
+
+  //   Step 2 : stateless widget
   runApp(
     MaterialApp(
-      title: "My Title",
+      title: "My title",
       home: Scaffold(
         appBar: AppBar(
           title: Text("My App"),
           backgroundColor: Colors.pinkAccent,
           centerTitle: true,
         ),
-        body: Text("Hello Flutter"),
+        body: Home(),
       ),
     ),
   );
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+// Step 2 stateless widget
+// class Home extends StatelessWidget {
+//   const Home({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Text("Hello Flutter");
+//   }
+
+// Step 3 container widget
+class Home extends StatelessWidget {
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
+    // return Container(color: Colors.blueAccent, width: 300, height: 300);
+    // return Container(color: Colors.blueAccent, margin: EdgeInsets.all(10));
+    // return Container(
+    //   color: Colors.blueAccent,
+    //   margin: EdgeInsets.fromLTRB(5, 10, 15, 20),
+    // );
+    // return Container(
+    //   color: Colors.blueAccent,
+    //   margin: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+    //   padding: EdgeInsets.all(20),
+    //   child: Text("Hello Flutter",
+    //   style: TextStyle(fontSize: 30, letterSpacing: 3),
+    //   ),
+    // );
+    return Center(
+      child: Container(
+        color: Colors.blueAccent,
+        margin: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+        padding: EdgeInsets.all(20),
+        child: Text(
+          "Hello Flutter",
+          style: TextStyle(fontSize: 30, letterSpacing: 3),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
