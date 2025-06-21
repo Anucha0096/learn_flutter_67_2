@@ -15,6 +15,7 @@ class Home extends StatelessWidget {
           TextButton(
             style: TextButton.styleFrom(foregroundColor: Colors.pinkAccent),
             onPressed: () {
+              // ignore: avoid_print
               print("Button pressed");
             },
             child: Text(
@@ -29,6 +30,7 @@ class Home extends StatelessWidget {
               foregroundColor: Colors.white,
             ),
             onPressed: () {
+              // ignore: avoid_print
               print("Button Pressed 2");
             },
             child: Text(

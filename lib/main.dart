@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 // Step 4: sperete the home widget into its own file
 // import 'screen/home.dart';
-import 'package:learn_flutter_67_2/screen/home.dart';
+
 import 'package:learn_flutter_67_2/screen/item.dart';
 
 
