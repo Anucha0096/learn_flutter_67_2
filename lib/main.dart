@@ -10,6 +10,8 @@ import 'package:learn_flutter_67_2/screen/item.dart';
 
 
 void main() {
+  // Step 13: TextFormField for the input
+  // Step 14: DropdownButton for the job selection
   runApp(const AddForm());
   // Step 1: appBar and body
   //runApp(const MyApp());
