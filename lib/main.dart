@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+// Step 13: TextFormField for the input
+// Step 14: DropdownButton for the job selection
+import 'package:learn_flutter_67_2/screen/addForm.dart';
 
 // Step 4: sperete the home widget into its own file
 // import 'screen/home.dart';
@@ -7,6 +10,7 @@ import 'package:learn_flutter_67_2/screen/item.dart';
 
 
 void main() {
+  runApp(const AddForm());
   // Step 1: appBar and body
   //runApp(const MyApp());
 
@@ -27,23 +31,23 @@ void main() {
   //   );
 
   //   Step 2 : stateless widget
-  var scaffold = Scaffold(
-        appBar: AppBar(
-          title: Text("My App"),
-          backgroundColor: Colors.pinkAccent,
-          centerTitle: true,
-        ),
-        // body: Home(),
+  // var scaffold = Scaffold(
+  //       appBar: AppBar(
+  //         title: Text("My App"),
+  //         backgroundColor: Colors.pinkAccent,
+  //         centerTitle: true,
+  //       ),
+  //       // body: Home(),
 
-        // Step 8: stateful widget
-        body: Item(),
-      );
-  runApp(
-    MaterialApp(
-      title: "My title",
-      home: scaffold,
-    ),
-  );
+  //       // Step 8: stateful widget
+  //       body: Item(),
+  //     );
+  // runApp(
+  //   MaterialApp(
+  //     title: "My title",
+  //     home: scaffold,
+  //   ),
+  // );
 }
 
 // Step 2 stateless widget
