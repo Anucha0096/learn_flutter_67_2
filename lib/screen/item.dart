@@ -1,6 +1,10 @@
 // Step 8: stateful widget
 // Step 9: listview widget
+
 import 'package:flutter/material.dart';
+
+// Step 10 : make a model for store data
+import 'package:learn_flutter_67_2/models/person.dart';
 
 class Item extends StatefulWidget {
   const Item({super.key});
@@ -25,7 +29,7 @@ class _ItemState extends State<Item> {
   //   }
 
   // Step 9: listview widget
-  List data = ["สมชาย", "สมหญิง", "สมจิตร", "สมศรี", "สมปอง"];
+  // List data = ["สมชาย", "สมหญิง", "สมจิตร", "สมศรี", "สมปอง"];
 
   @override
   Widget build(BuildContext context) {
@@ -58,17 +62,46 @@ class _ItemState extends State<Item> {
           ),
           margin: EdgeInsets.symmetric(vertical: 2, horizontal: 5),
           padding: EdgeInsets.all(40),
-          child: Text(
-            data[index],
-            style: TextStyle(
-              fontSize: 30,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
+          // child: Text(
+          //   data[index],
+          //   style: TextStyle(
+          //     fontSize: 30,
+          //     color: Colors.white,
+          //     fontWeight: FontWeight.bold,
+          //   ),
+          // ),
+
+          // Step 10 : make a model for store data
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children:[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    personList[index].name,
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    "Age :${personList[index].age}",
+                    style: TextStyle(fontSize: 18,color: Colors.white70,
+                    ),
+                  ),
+                  Text(
+                    "job :${personList[index].age}",
+                    style: TextStyle(fontSize: 18,color: Colors.white70,
+                    ),
+                  ),
+                ],
+            )],
           ),
         );
       },
-      itemCount: data.length,
+      itemCount: personList.length,
     );
   }
 }
